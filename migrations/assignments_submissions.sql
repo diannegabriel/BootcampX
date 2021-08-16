@@ -1,9 +1,9 @@
 CREATE TABLE assignment (
   id SERIAL PRIMARY NOT NULL,
   name VARCHAR(255),
-  content VARCHAR(255),
-  day DATE,
-  chapter VARCHAR(255),
+  content TEXT,
+  day INTEGER,
+  chapter INTEGER,
   duration INTEGER
 );
 
