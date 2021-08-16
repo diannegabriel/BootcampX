@@ -1,4 +1,12 @@
+-- Original answer (close but wrong):
+-- SELECT sum(assignment_submissions.duration) as total_duration
+-- FROM assignment_submissions
+-- JOIN students ON students.id = student_id
+-- WHERE cohort_id = 1;
+
+-- Correct answer from Compass
 SELECT sum(assignment_submissions.duration) as total_duration
 FROM assignment_submissions
 JOIN students ON students.id = student_id
-WHERE cohort_id = 1;
+JOIN cohorts ON cohorts.id = cohort_id
+WHERE cohorts.name = 'FEB12';
